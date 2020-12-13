@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Operation">
+  <DataContextMoniker Name="/OperationDataContext" />
+  <nestedChildShapes>
+    <classShape Id="211bc28f-f569-4be6-957a-2a22dfb3f415" absoluteBounds="1.75, 1.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/OperationDataContext/Role" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1599cf53-11bc-46e4-a18f-7354cdc8ff5d" absoluteBounds="1.7650000000000001, 1.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2e0aafc6-6cfb-45ae-9e82-4257737325d3" absoluteBounds="4, 3.625, 2, 1.7708968098958331">
+      <DataClassMoniker Name="/OperationDataContext/Users" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4ba9f9b2-56c8-4645-83f9-9a0143bf4d18" absoluteBounds="4.015, 4.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.46874825 : 3.625); (4.46874825 : 1.71875); (3.75 : 1.71875)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/OperationDataContext/Users/Users_Role" />
+      <nodes>
+        <classShapeMoniker Id="2e0aafc6-6cfb-45ae-9e82-4257737325d3" />
+        <classShapeMoniker Id="211bc28f-f569-4be6-957a-2a22dfb3f415" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="6bf7dab7-ebd6-4221-af77-ebf5830ad8b0" absoluteBounds="5.75, 2.25, 2, 1.1939925130208333">
+      <DataClassMoniker Name="/OperationDataContext/Sector" />
+      <nestedChildShapes>
+        <elementListCompartment Id="576da5c9-7c55-4eea-b691-becbae849945" absoluteBounds="5.765, 2.71, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5.0000015 : 3.625); (5.0000015 : 2.84699625651042); (5.75 : 2.84699625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/OperationDataContext/Users/Users_Sector" />
+      <nodes>
+        <classShapeMoniker Id="2e0aafc6-6cfb-45ae-9e82-4257737325d3" />
+        <classShapeMoniker Id="6bf7dab7-ebd6-4221-af77-ebf5830ad8b0" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

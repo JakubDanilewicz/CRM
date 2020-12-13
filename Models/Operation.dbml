@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="CRM" Class="OperationDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=CRM;Integrated Security=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="CRMConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Role" Member="Role">
+    <Type Name="Role">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="role" Member="role1" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Association Name="Users_Role" Member="Users" ThisKey="id" OtherKey="id" Type="Users" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="Users">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="surname" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="dateOfBirth" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Column Name="login" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Association Name="Users_Role" Member="Role" ThisKey="id" OtherKey="id" Type="Role" />
+      <Association Name="Users_Sector" Member="Sector" ThisKey="id" OtherKey="id" Type="Sector" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Sector" Member="Sector">
+    <Type Name="Sector">
+      <Column Name="id" Type="System.Decimal" DbType="Decimal(18,0) NOT NULL" CanBeNull="false" />
+      <Column Name="sector" Member="sector1" Type="System.String" DbType="Char(50)" CanBeNull="true" />
+      <Association Name="Users_Sector" Member="Users" ThisKey="id" OtherKey="id" Type="Users" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>
