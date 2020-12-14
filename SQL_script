@@ -1,0 +1,29 @@
+DROP TABLE IF EXISTS Role;
+DROP TABLE IF EXISTS Sector;
+DROP TABLE if EXISTS Users;
+
+CREATE TABLE Users
+(
+id decimal IDENTITY (1,1) NOT NULL,
+[name] char (50),
+surname char (50),
+dateOfBirth char (50) ,
+[login] char (50),
+CONSTRAINT pk_id PRIMARY KEY (id)
+)
+
+CREATE TABLE [Role]
+(
+id decimal NOT NULL,
+[role] char (50),
+CONSTRAINT FK1_ID FOREIGN KEY (id) REFERENCES Users(id)
+
+)
+
+CREATE TABLE [Sector]
+(
+id decimal NOT NULL,
+[sector] char (50),
+CONSTRAINT FK2_ID FOREIGN KEY (id) REFERENCES Users(id)
+
+)
